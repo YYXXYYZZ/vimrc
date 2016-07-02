@@ -11,7 +11,11 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'vim-scripts/a.vim'
 Plugin 'Valloric/YouCompleteMe'
+<<<<<<< HEAD
+" Plugin 'jeaye/color_coded'
+=======
 Plugin 'jeaye/color_coded'
+>>>>>>> eab1b9ec222b60d825d044299678b1b4fa7a81cf
 Plugin 'rdnetto/YCM-Generator'
 Plugin 'scrooloose/nerdtree'
 Plugin 'wincent/command-t'
@@ -23,6 +27,12 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'tpope/vim-surround'
 Plugin 'vim-scripts/taglist.vim'
+<<<<<<< HEAD
+Plugin 'godlygeek/tabular'
+Plugin 'plasticboy/vim-markdown'
+Plugin 'JamshedVesuna/vim-markdown-preview'
+=======
+>>>>>>> eab1b9ec222b60d825d044299678b1b4fa7a81cf
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -82,3 +92,9 @@ set shiftwidth=4
 set fileencodings=utf-8,gb2312,gb18030,gbk,ucs-bom,cp936,latin1
 set showcmd
 "set colorcolumn=80
+<<<<<<< HEAD
+
+" markdown
+let vim_markdown_preview_github=1
+=======
+>>>>>>> eab1b9ec222b60d825d044299678b1b4fa7a81cf

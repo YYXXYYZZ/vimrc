@@ -1,31 +1,30 @@
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
+call plug#begin('~/.vim/plugged')
 
-" let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'vim-scripts/a.vim'
-Plugin 'Valloric/YouCompleteMe'
-" Plugin 'jeaye/color_coded'
-Plugin 'rdnetto/YCM-Generator'
-Plugin 'scrooloose/nerdtree'
-Plugin 'wincent/command-t'
-Plugin 'SirVer/ultisnips'
-Plugin 'honza/vim-snippets'
-Bundle 'vim-ruby/vim-ruby'
-Bundle 'scrooloose/nerdcommenter'
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-Plugin 'tpope/vim-surround'
-Plugin 'vim-scripts/taglist.vim'
-Plugin 'godlygeek/tabular'
-" All of your Plugins must be added before the following line
-call vundle#end()            " required
+Plug 'VundleVim/Vundle.vim'
+Plug 'vim-scripts/a.vim'
+Plug 'Valloric/YouCompleteMe'
+"Plug 'jeaye/color_coded'
+Plug 'rdnetto/YCM-Generator'
+Plug 'scrooloose/nerdtree'
+Plug 'wincent/command-t'
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'tpope/vim-surround'
+Plug 'vim-scripts/taglist.vim'
+Plug 'godlygeek/tabular'
+Plug 'plasticboy/vim-markdown'
+Plug 'JamshedVesuna/vim-markdown-preview'
+Plug 'danro/rename.vim'
+Plug 'fatih/vim-go'
+Plug 'easymotion/vim-easymotion'
+
+call plug#end()
+
 filetype plugin indent on    " required
 
 " restore the old position
@@ -69,6 +68,13 @@ autocmd FileType ruby nmap <F5> : !ruby % <cr>
 autocmd FileType cpp map <F6> : set filetype=cpp <CR>
 autocmd FileType cpp map <F4> : A <CR>
 
+" go
+let g:go_highlight_types = 1
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_extra_types = 1
+
 " comment
 " Add spaces after comment delimiters by default
 let g:NERDSpaceDelims = 1
@@ -101,4 +107,5 @@ set softtabstop=4
 set shiftwidth=4
 set fileencodings=utf-8,gb2312,gb18030,gbk,ucs-bom,cp936,latin1
 set showcmd
-set foldmethod=indent
+" markdown
+let vim_markdown_preview_github=1
